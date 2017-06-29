@@ -1,0 +1,27 @@
+{
+  "name": "ui-aggregator",
+  "version": "1.0.0",
+  "description": "Server Side UI Aggregation Layer for Dash Front End",
+  "main": "index.js",
+  "repository": "git@github.com:swazza/ui-aggregator.git",
+  "author": "swazza",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-graphql": "^0.6.6",
+    "graphql": "^0.10.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.11.0",
+    "webpack": "^3.0.0"
+  },
+  "scripts": {
+    "build": "webpack --config ./build/webpack.config.js",
+    "start": "concurrently 'webpack --config ./build/webpack.config.js --watch' 'nodemon ./dist/app.server.bundle.js'"
+  }
+}
